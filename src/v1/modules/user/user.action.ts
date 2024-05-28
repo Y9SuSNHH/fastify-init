@@ -1,4 +1,4 @@
-import { server } from "../../app";
+import { server } from "../../../app";
 import { verifyPassword } from "../../utils/hash";
 import { AddUserInput, LoginInput } from "./user.schema";
 import { addUser, getUserByEmail, sendEmail } from "./user.service";
@@ -16,6 +16,8 @@ export async function registerAction(input: AddUserInput) {
 
 export async function loginAction(input: LoginInput) {
     const user = await getUserByEmail(input.email)
+
+    console.log('user', user)
 
     // find user by email
     if (!user) {

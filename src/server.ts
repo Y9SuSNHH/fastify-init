@@ -2,10 +2,10 @@ import Fastify, { FastifyRequest, FastifyReply } from "fastify";
 import fJwt, { JWT } from "fastify-jwt";
 // import swagger from "fastify-swagger";
 import { withRefResolver } from "fastify-zod";
-import userRoutes from "./modules/user/user.route";
-import productRoutes from "./modules/product/product.route";
-import { userSchemas } from "./modules/user/user.schema";
-import { productSchemas } from "./modules/product/product.schema";
+import userRoutes from "./v1/modules/user/user.route";
+import productRoutes from "./v1/modules/product/product.route";
+import { userSchemas } from "./v1/modules/user/user.schema";
+import { productSchemas } from "./v1/modules/product/product.schema";
 // import { version } from "../package.json";
 
 declare module "fastify" {
